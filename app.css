@@ -220,32 +220,6 @@ input[type="reset"] {
     cursor: pointer;
 }
 
-/* Form elements (element selectors) */
-input,
-select,
-textarea {
-    width: 100%;
-    padding: var(--input-padding-y) var(--input-padding-x);
-    font-size: var(--input-font-size);
-    background: hsl(var(--card));
-    color: hsl(var(--card-foreground));
-    border: 1px solid hsl(var(--input));
-    border-radius: var(--input-radius);
-    transition: var(--transition-smooth);
-}
-input::placeholder,
-textarea::placeholder {
-    color: hsl(var(--muted-foreground));
-}
-input:focus,
-select:focus,
-textarea:focus {
-    outline: 2px solid hsl(var(--ring));
-    outline-offset: 2px;
-    border-color: transparent;
-    background: hsl(var(--popover));
-}
-
 /* Cards (semantic elements) */
 article,
 section {
@@ -452,37 +426,6 @@ a:focus-visible {
     outline: 2px solid hsl(var(--ring));
     outline-offset: 2px;
     border-radius: 4px;
-}
-
-input,
-select,
-textarea {
-    width: 100%;
-    padding: var(--input-padding-y) var(--input-padding-x);
-    font-size: var(--input-font-size);
-    background: hsl(var(--card));
-    color: hsl(var(--card-foreground));
-    border: 1px solid hsl(var(--input));
-    border-radius: var(--input-radius);
-    transition: var(--transition-smooth);
-}
-input::placeholder,
-textarea::placeholder {
-    color: hsl(var(--muted-foreground));
-}
-input:focus,
-select:focus,
-textarea:focus {
-    outline: 2px solid hsl(var(--ring));
-    outline-offset: 2px;
-    border-color: transparent;
-    background: hsl(var(--popover));
-}
-label {
-    display: inline-block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: hsl(var(--foreground));
 }
 
 /* Cards (semantic elements) */

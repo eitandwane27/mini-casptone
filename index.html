@@ -6,6 +6,7 @@
         <title>Document</title>
         <link rel="stylesheet" href="app.css" />
         <link rel="stylesheet" href="specificity.css" />
+        <script defer src="script.js"></script>
     </head>
     <body>
         <div class="cont-head">
@@ -280,6 +281,267 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- MODAL SECTION -->
+
+            <div class="modal-overlay" id="auth-overlay" style="display: none">
+                <div class="modal">
+                    <button class="close-btn" onclick="closeModal()">
+                        &times;
+                    </button>
+
+                    <div class="first-container">
+                        <div class="form-content">
+                            <h1 class="h1-modal">Re-Value.PH</h1>
+                            <h2 class="h2-modal">Welcome Back!</h2>
+                            <p class="p-modal">
+                                Please enter your login details below
+                            </p>
+
+                            <form class="auth-form">
+                                <div class="input-group">
+                                    <label class="input-label" for="username"
+                                        >Username</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="username"
+                                        placeholder="Enter your username"
+                                        required
+                                    />
+                                </div>
+
+                                <div class="input-group">
+                                    <label class="input-label" for="password"
+                                        >Password</label
+                                    >
+                                    <input
+                                        type="password"
+                                        id="password"
+                                        placeholder="Enter your password"
+                                        required
+                                    />
+                                </div>
+
+                                <button class="btn-form" type="submit">
+                                    Sign In
+                                </button>
+                            </form>
+
+                            <div class="forgot-password">
+                                <a
+                                    href="#"
+                                    onclick="alert('Forgot password clicked!')"
+                                    >Forgot your password?</a
+                                >
+                                <div
+                                    class="register-link"
+                                    style="margin-top: 0.75rem; font-size: 14px"
+                                >
+                                    <span>New here? </span>
+                                    <a href="#" onclick="openRegisterModal()"
+                                        >Create an account</a
+                                    >
+                                </div>
+                            </div>
+                            <!-- Register container (duplicate layout) -->
+                            <div
+                                class="register-container"
+                                style="display: none"
+                            >
+                                <h1 class="h1-modal">Re-Value.PH</h1>
+                                <h2 class="h2-modal">Create Account</h2>
+                                <p class="p-modal">
+                                    Join our community of sustainable fashion
+                                    lovers
+                                </p>
+
+                                <form class="auth-form" id="register-form">
+                                    <div class="input-group">
+                                        <label
+                                            class="input-label"
+                                            for="full-name"
+                                            >Full name</label
+                                        >
+                                        <input
+                                            type="text"
+                                            id="full-name"
+                                            placeholder="Enter your full name"
+                                            required
+                                        />
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label class="input-label" for="email"
+                                            >Email</label
+                                        >
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            placeholder="Enter your email"
+                                            required
+                                        />
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label
+                                            class="input-label"
+                                            for="reg-password"
+                                            >Password</label
+                                        >
+                                        <input
+                                            type="password"
+                                            id="reg-password"
+                                            placeholder="Create a password"
+                                            required
+                                        />
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label
+                                            class="input-label"
+                                            for="reg-confirm"
+                                            >Confirm password</label
+                                        >
+                                        <input
+                                            type="password"
+                                            id="reg-confirm"
+                                            placeholder="Confirm your password"
+                                            required
+                                        />
+                                    </div>
+
+                                    <button class="btn-form" type="submit">
+                                        Create account
+                                    </button>
+                                </form>
+                                <div class="forgot-password">
+                                    <div
+                                        class="register-link"
+                                        style="
+                                            margin-top: 0.75rem;
+                                            font-size: 14px;
+                                        "
+                                    >
+                                        <span>Already have an account? </span>
+                                        <a
+                                            href="#"
+                                            onclick="document.querySelector('.register-container').style.display='none'"
+                                            >Sign in</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sec-container">
+                        <div class="decorative-circle"></div>
+                        <div class="decorative-circle-2"></div>
+                        <div class="image-placeholder">
+                            Your Image Goes Here
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- REGISTER MODAL (separate, same layout) -->
+            <div
+                class="modal-overlay"
+                id="register-overlay"
+                style="display: none"
+            >
+                <div class="modal">
+                    <button class="close-btn" onclick="closeRegisterModal()">
+                        &times;
+                    </button>
+
+                    <div class="first-container">
+                        <div class="form-content">
+                            <h2 class="h2-modal">Create Account</h2>
+                            <p class="p-modal">
+                                Join our community of sustainable fashion lovers
+                            </p>
+
+                            <form class="auth-form" id="register-form">
+                                <div class="input-group">
+                                    <label class="input-label" for="full-name"
+                                        >Full name</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="full-name"
+                                        placeholder="Enter your full name"
+                                        required
+                                    />
+                                </div>
+
+                                <div class="input-group">
+                                    <label class="input-label" for="email"
+                                        >Email</label
+                                    >
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        placeholder="Enter your email"
+                                        required
+                                    />
+                                </div>
+
+                                <div class="input-group">
+                                    <label
+                                        class="input-label"
+                                        for="reg-password"
+                                        >Password</label
+                                    >
+                                    <input
+                                        type="password"
+                                        id="reg-password"
+                                        placeholder="Create a password"
+                                        required
+                                    />
+                                </div>
+
+                                <div class="input-group">
+                                    <label class="input-label" for="reg-confirm"
+                                        >Confirm password</label
+                                    >
+                                    <input
+                                        type="password"
+                                        id="reg-confirm"
+                                        placeholder="Confirm your password"
+                                        required
+                                    />
+                                </div>
+
+                                <button class="btn-form" type="submit">
+                                    Create account
+                                </button>
+                            </form>
+
+                            <div class="forgot-password">
+                                <div
+                                    class="register-link"
+                                    style="margin-top: 0.75rem; font-size: 14px"
+                                >
+                                    <span>Already have an account? </span>
+                                    <a
+                                        href="#"
+                                        onclick="closeRegisterModal(); openModal();"
+                                        >Sign in</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sec-container">
+                        <div class="decorative-circle"></div>
+                        <div class="decorative-circle-2"></div>
+                        <div class="image-placeholder">
+                            Your Image Goes Here
                         </div>
                     </div>
                 </div>
