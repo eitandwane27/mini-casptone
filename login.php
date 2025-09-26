@@ -17,7 +17,7 @@ if (isset($_POST['login'])) {
     $password = $_POST['password'];
 
     // Fetch user
-    $stmt = $conn->prepare("SELECT * FROM log WHERE user_name = ?");
+    $stmt = $conn->prepare("SELECT * FROM users WHERE user_name = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $result = $stmt->get_result();
