@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
 
             // If admin logs in, redirect to admin.html
             if ($row['E_mail'] === "admin@revalue.com") {
-                header("Location: admin.html");
+                header("Location: admin.php");
                 exit;
             } else {
                 header("Location: index.php");
@@ -313,7 +313,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
 
       <div class="modal-overlay" id="auth-overlay" style="display: none">
         <div class="modal">
-          <button class="close-btn" onclick="closeModal()">&times;</button>
+          
 
           <div class="first-container">
             <div class="form-content">
