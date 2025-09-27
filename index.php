@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
                 header("Location: admin.php");
                 exit;
             } else {
-                header("Location: userDashboard.php");
+                header("Location: index.php");
                 exit;
             }
         } else {
@@ -95,15 +95,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      lucide.createIcons();
+    });
+  </script>
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="specificity.css" />
     <script defer src="script.js"></script>
+
+
   </head>
   <body>
     <div class="cont-head">
       <header class="header ps-mg">
         <div class="left">
-          <h6>Logo</h6>
+          <h2 style="margin-bottom: 0;"><i class="fa-solid fa-leaf" style="color:darkgreen"></i></h2>
           <h3>Re-Value.PH</h3>
         </div>
 
@@ -112,11 +125,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
         </div>
 
         <div class="right">
-          <button class="btn btn-outline">Categories</button>
-          <button class="btn btn-outline">Add to Cart</button>
-          <button class="btn btn-outline" ><a href="userDashboard.php">My Account </a></button>
+        
+          <button class="btn btn-outline lcd"><i data-lucide="shopping-cart"></i></button>
+          <button class="btn btn-outline lcd" ><a href="userDashboard.php"><i data-lucide="user"></i> </a></button>
           <form method="POST" style="display:inline;">
-    <button class="btn btn-outline" type="submit" name="logout">Log out</button>
+    <button class="btn btn-outline lcd" type="submit" name="logout"> <i data-lucide="log-out"></i></button>
            </form>
         </div>
       </header>
@@ -194,7 +207,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
             <h6 class="cl-des">Handpicked and made special for you</h6>
             <div class="cl-pos">
               <div class="card-cnt">
-                <div class="img-container"></div>
+                <div class="img-container">
+                  <img src="product/466736746_17991824162718176_7790907259396982803_n.jpg" alt="">
+                </div>
                 <div class="img-des-container">
                   <h3 class="img-des">Vintage Denim Jacket</h3>
                   <div class="in">
@@ -208,7 +223,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
                 </div>
               </div>
               <div class="card-cnt">
-                <div class="img-container"></div>
+                <div class="img-container">
+                  <img src="product/466964397_17991823886718176_1726109815671737410_n.jpg" alt="">
+                </div>
                 <div class="img-des-container">
                   <h3 class="img-des">Vintage Denim Jacket</h3>
                   <div class="in">
@@ -222,7 +239,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
                 </div>
               </div>
               <div class="card-cnt">
-                <div class="img-container"></div>
+                <div class="img-container">
+                  <img src="product/466827131_17991821561718176_4971187432800159467_n.jpg" alt="">
+                </div>
                 <div class="img-des-container">
                   <h3 class="img-des">Vintage Denim Jacket</h3>
                   <div class="in">
@@ -236,7 +255,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
                 </div>
               </div>
               <div class="card-cnt">
-                <div class="img-container"></div>
+                <div class="img-container">
+                  <img src="product/466730130_17991824051718176_724116604996009720_n.jpg" alt="">
+                </div>
                 <div class="img-des-container">
                   <h3 class="img-des">Vintage Denim Jacket</h3>
                   <div class="in">
@@ -250,7 +271,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
                 </div>
               </div>
               <div class="card-cnt">
-                <div class="img-container"></div>
+                <div class="img-container">
+                  <img src="product/466923890_17991822080718176_299731762076899406_n.jpg" alt="">
+                </div>
                 <div class="img-des-container">
                   <h3 class="img-des">Vintage Denim Jacket</h3>
                   <div class="in">
@@ -264,7 +287,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
                 </div>
               </div>
               <div class="card-cnt">
-                <div class="img-container"></div>
+                <div class="img-container">
+                  <img src="product/466859525_17991823883718176_7967796178441113811_n.jpg" alt="">
+                </div>
                 <div class="img-des-container">
                   <h3 class="img-des">Vintage Denim Jacket</h3>
                   <div class="in">
@@ -278,7 +303,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
                 </div>
               </div>
               <div class="card-cnt">
-                <div class="img-container"></div>
+                <div class="img-container">
+                  <img src="product/1.jpg" alt="">
+                </div>
                 <div class="img-des-container">
                   <h3 class="img-des">Vintage Denim Jacket</h3>
                   <div class="in">
@@ -292,7 +319,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
                 </div>
               </div>
               <div class="card-cnt">
-                <div class="img-container"></div>
+                <div class="img-container">
+                  <img src="product/2.jpg" alt="">
+                </div>
                 <div class="img-des-container">
                   <h3 class="img-des">Vintage Denim Jacket</h3>
                   <div class="in">
@@ -310,7 +339,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
         </div>
       </div>
 
-      <?php if (!isset($_SESSION['username'])): ?>
+      <?php if (!isset($_SESSION['user_id'])): ?>
       <!-- MODAL SECTION -->
 
       <div class="modal-overlay" id="auth-overlay" style="display: none">
@@ -461,7 +490,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
           <div class="sec-container">
             <div class="decorative-circle"></div>
             <div class="decorative-circle-2"></div>
-            <div class="image-placeholder">Your Image Goes Here</div>
+            <div class="image-placeholder"><img src="product/anthony-sebbo-Qn8VH9dE7-U-unsplash.jpg" alt=""></div>
           </div>
         </div>
       </div>
@@ -550,7 +579,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
           <div class="sec-container">
             <div class="decorative-circle"></div>
             <div class="decorative-circle-2"></div>
-            <div class="image-placeholder">Your Image Goes Here</div>
+            <div class="image-placeholder"><img src="product/anthony-sebbo-Qn8VH9dE7-U-unsplash.jpg" alt=""></div>
           </div>
         </div>
       </div>

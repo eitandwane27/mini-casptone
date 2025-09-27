@@ -13,8 +13,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+    <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="user.css" />
-    <!-- <link rel="stylesheet" href="app.css" /> -->
     <script defer src="user.js"></script>
     <title>User Dashboard</title>
   </head>
@@ -23,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
     <nav class="top-nav">
       <div class="nav-content">
         <div class="logo">
-          <div class="logo-icon">P</div>
+          <h2 style="margin-bottom: 0;"><i class="fa-solid fa-leaf" style="color:darkgreen"></i></h2>
           <span class="sage">Re-Value.PH</span>
         </div>
 
