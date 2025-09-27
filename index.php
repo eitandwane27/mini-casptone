@@ -112,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
         <div class="right">
           <button class="btn btn-outline">Categories</button>
           <button class="btn btn-outline">Add to Cart</button>
-          <button class="btn btn-outline">My Account</button>
+          <button class="btn btn-outline" ><a href="userDashboard.html">My Account </a></button>
           <form method="POST" style="display:inline;">
     <button class="btn btn-outline" type="submit" name="logout">Log out</button>
            </form>
@@ -466,9 +466,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
       <!-- REGISTER MODAL (separate, same layout) -->
       <div class="modal-overlay" id="register-overlay" style="display: none">
         <div class="modal">
-          <button class="close-btn" onclick="closeRegisterModal()">
-            &times;
-          </button>
+         
 
           <div class="first-container">
             <div class="form-content">
