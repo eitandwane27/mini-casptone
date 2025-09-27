@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register'])) {
 
 // ---- Handle Login ----
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
-    $email = $_POST['username']; // "username" field actually contains email
+    $email = $_POST['username']; // form field "username" actually contains email
     $password = $_POST['password'];
 
     $stmt = $conn->prepare("SELECT * FROM users WHERE E_mail = ?");
@@ -49,15 +49,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
 
     if ($row = $result->fetch_assoc()) {
         if (password_verify($password, $row['Pass'])) {
-            $_SESSION['username'] = $row['Full_name'];
-            $_SESSION['email'] = $row['E_mail'];
+            // ✅ Store session data once
+            $_SESSION['user_id']   = $row['id'];
+            $_SESSION['email']     = $row['E_mail'];
+            $_SESSION['full_name'] = $row['Full_name'];
 
-            // If admin logs in, redirect to admin.html
+            // ✅ Check if admin
             if ($row['E_mail'] === "admin@revalue.com") {
                 header("Location: admin.php");
                 exit;
             } else {
-                header("Location: index.php");
+                header("Location: userDashboard.php");
                 exit;
             }
         } else {
@@ -112,7 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
         <div class="right">
           <button class="btn btn-outline">Categories</button>
           <button class="btn btn-outline">Add to Cart</button>
-          <button class="btn btn-outline" ><a href="userDashboard.html">My Account </a></button>
+          <button class="btn btn-outline" ><a href="userDashboard.php">My Account </a></button>
           <form method="POST" style="display:inline;">
     <button class="btn btn-outline" type="submit" name="logout">Log out</button>
            </form>
